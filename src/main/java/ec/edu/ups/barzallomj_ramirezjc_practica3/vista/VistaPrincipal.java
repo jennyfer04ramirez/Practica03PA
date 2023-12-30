@@ -257,7 +257,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        int segundos = 100;
+        int segundos = 1000;
         a = new HiloA(segundos);
         a.start();
     }//GEN-LAST:event_jButton7ActionPerformed

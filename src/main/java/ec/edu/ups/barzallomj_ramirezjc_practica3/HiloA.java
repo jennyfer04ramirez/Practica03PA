@@ -21,8 +21,8 @@ public class HiloA extends Thread{
     public void run(){
         int numero = 1;
         while (true) {            
-            String ruta = "src\\main\\resources\\imagenes\\"+numero+".jpg";
             if(numero ==5) numero = 1;
+            String ruta = "src\\main\\resources\\imagenes\\"+numero+".jpg";
             numero++;
             ImageIcon imagen = new ImageIcon(ruta);
             ec.edu.ups.barzallomj_ramirezjc_practica3.vista.VistaPrincipal.jLabel4.setIcon(imagen);
