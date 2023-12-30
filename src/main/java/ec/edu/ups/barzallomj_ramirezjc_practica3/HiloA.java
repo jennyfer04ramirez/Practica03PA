@@ -4,10 +4,34 @@
  */
 package ec.edu.ups.barzallomj_ramirezjc_practica3;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author casa
  */
-public class HiloA {
+public class HiloA extends Thread{
+    private int tiempo;
+
+    public HiloA(int tiempo) {
+        this.tiempo = tiempo;
+    }
+    
+    @Override
+    public void run(){
+        int numero = 1;
+        while (true) {            
+            String ruta = "src\\main\\resources\\imagenes\\"+numero+".jpg";
+            if(numero ==5) numero = 1;
+            numero++;
+            ImageIcon imagen = new ImageIcon(ruta);
+            ec.edu.ups.barzallomj_ramirezjc_practica3.vista.VistaPrincipal.jLabel4.setIcon(imagen);
+            try{
+                Thread.sleep(this.tiempo);
+            }catch(Exception e){
+                System.out.println(e);
+            }
+        }
+    }
     
 }
