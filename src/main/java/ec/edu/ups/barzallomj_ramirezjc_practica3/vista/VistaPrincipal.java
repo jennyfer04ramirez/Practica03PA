@@ -5,6 +5,8 @@
 package ec.edu.ups.barzallomj_ramirezjc_practica3.vista;
 
 import ec.edu.ups.barzallomj_ramirezjc_practica3.HiloA;
+import ec.edu.ups.barzallomj_ramirezjc_practica3.HiloB;
+import ec.edu.ups.barzallomj_ramirezjc_practica3.HiloC;
 
 /**
  *
@@ -14,6 +16,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
     
     HiloA a;
+    HiloB b;
+    HiloC c;
     /**
      * Creates new form VistaPrincipal
      */
@@ -259,6 +263,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         int segundos = 1000;
         a = new HiloA(segundos);
+        b = new HiloB(segundos);
+        c = new HiloC(segundos);
         a.start();
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -307,19 +313,19 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
+    public static javax.swing.JLabel jLabel10;
+    public static javax.swing.JLabel jLabel11;
+    public static javax.swing.JLabel jLabel12;
+    public static javax.swing.JLabel jLabel13;
+    public static javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     public static javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel jLabel4;
     public static javax.swing.JLabel jLabel5;
     public static javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    public static javax.swing.JLabel jLabel7;
+    public static javax.swing.JLabel jLabel8;
+    public static javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
