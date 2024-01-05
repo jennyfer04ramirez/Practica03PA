@@ -20,6 +20,22 @@ public class HiloB extends Thread {
     @Override
     public void run() {
         int numero = 1;
+        if (ec.edu.ups.barzallomj_ramirezjc_practica3.vista.VistaPrincipal.jLabel7.getIcon() != null) {
+            String rutaImagen = ec.edu.ups.barzallomj_ramirezjc_practica3.vista.VistaPrincipal.jLabel7.getIcon().toString();
+
+            int inicio = rutaImagen.lastIndexOf("\\") + 1;
+            int fin = rutaImagen.lastIndexOf(".");
+
+            if (inicio > 0 && fin > inicio) {
+                String numeroImagen = rutaImagen.substring(inicio, fin);
+
+                try {
+                    numero = Integer.parseInt(numeroImagen);
+                } catch (NumberFormatException e) {
+                    numero = 1;
+                }
+            }
+        }
         while (true) {
             String ruta = "src\\main\\resources\\imagenes\\" + numero + ".jpg";
             ImageIcon imagen = new ImageIcon(ruta);

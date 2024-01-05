@@ -21,12 +21,28 @@ public class HiloA extends Thread {
     @Override
     public void run() {
         int numero = 1;
+        if (ec.edu.ups.barzallomj_ramirezjc_practica3.vista.VistaPrincipal.jLabel4.getIcon() != null) {
+            String rutaImagen = ec.edu.ups.barzallomj_ramirezjc_practica3.vista.VistaPrincipal.jLabel4.getIcon().toString();
+
+            int inicio = rutaImagen.lastIndexOf("\\") + 1;
+            int fin = rutaImagen.lastIndexOf(".");
+
+            if (inicio > 0 && fin > inicio) {
+                String numeroImagen = rutaImagen.substring(inicio, fin);
+
+                try {
+                    numero = Integer.parseInt(numeroImagen);
+                } catch (NumberFormatException e) {
+                    numero = 1;
+                }
+            }
+        }
         while (true) {
             String ruta = "src\\main\\resources\\imagenes\\" + numero + ".jpg";
             ImageIcon imagen = new ImageIcon(ruta);
             ec.edu.ups.barzallomj_ramirezjc_practica3.vista.VistaPrincipal.jLabel4.setIcon(imagen);
 
-            int siguienteNumero = (numero % 4) + 1; 
+            int siguienteNumero = (numero % 4) + 1;
             String ruta1 = "src\\main\\resources\\imagenes\\" + siguienteNumero + ".jpg";
             ImageIcon imagen1 = new ImageIcon(ruta1);
             ec.edu.ups.barzallomj_ramirezjc_practica3.vista.VistaPrincipal.jLabel3.setIcon(imagen1);
