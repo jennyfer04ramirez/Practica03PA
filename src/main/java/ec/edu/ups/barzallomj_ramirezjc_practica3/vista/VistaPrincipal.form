@@ -415,6 +415,9 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/2.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -424,6 +427,9 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/1.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -433,6 +439,9 @@
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/3.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -442,6 +451,9 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/4.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -451,6 +463,9 @@
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/1.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -460,6 +475,9 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/2.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -469,6 +487,9 @@
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/3.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -478,6 +499,9 @@
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/4.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -487,6 +511,9 @@
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/2.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -496,6 +523,9 @@
         <Component class="javax.swing.JLabel" name="jLabel12">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/4.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -505,6 +535,9 @@
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/1.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>
@@ -514,6 +547,9 @@
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imagenes/3.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
           <AuxValues>

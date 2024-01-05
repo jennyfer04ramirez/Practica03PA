@@ -7,6 +7,7 @@ package ec.edu.ups.barzallomj_ramirezjc_practica3.vista;
 import ec.edu.ups.barzallomj_ramirezjc_practica3.HiloA;
 import ec.edu.ups.barzallomj_ramirezjc_practica3.HiloB;
 import ec.edu.ups.barzallomj_ramirezjc_practica3.HiloC;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,12 +19,30 @@ public class VistaPrincipal extends javax.swing.JFrame {
     HiloA a;
     HiloB b;
     HiloC c;
+    private boolean hiloAEjecutandose = false;
+    private boolean hiloBEjecutandose = false;
+    private boolean hiloCEjecutandose = false;
 
     /**
      * Creates new form VistaPrincipal
      */
     public VistaPrincipal() {
         initComponents();
+        jLabel4.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\1.jpg"));
+        jLabel7.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\1.jpg"));
+        jLabel13.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\1.jpg"));
+        
+        jLabel3.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\2.jpg"));
+        jLabel8.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\2.jpg"));
+        jLabel11.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\2.jpg"));
+        
+        jLabel5.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\3.jpg"));
+        jLabel9.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\3.jpg"));
+        jLabel14.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\3.jpg"));
+        
+        jLabel6.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\4.jpg"));
+        jLabel10.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\4.jpg"));
+        jLabel12.setIcon(new ImageIcon("src\\main\\resources\\imagenes\\4.jpg"));
     }
 
     /**
@@ -168,39 +187,51 @@ public class VistaPrincipal extends javax.swing.JFrame {
         });
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/2.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/1.jpg"))); // NOI18N
         jLabel4.setText("jLabel3");
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3.jpg"))); // NOI18N
         jLabel5.setText("jLabel3");
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/4.jpg"))); // NOI18N
         jLabel6.setText("jLabel3");
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/1.jpg"))); // NOI18N
         jLabel7.setText("jLabel3");
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/2.jpg"))); // NOI18N
         jLabel8.setText("jLabel3");
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3.jpg"))); // NOI18N
         jLabel9.setText("jLabel3");
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/4.jpg"))); // NOI18N
         jLabel10.setText("jLabel3");
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/2.jpg"))); // NOI18N
         jLabel11.setText("jLabel3");
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/4.jpg"))); // NOI18N
         jLabel12.setText("jLabel3");
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/1.jpg"))); // NOI18N
         jLabel13.setText("jLabel3");
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3.jpg"))); // NOI18N
         jLabel14.setText("jLabel3");
 
         jLabel16.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
@@ -375,6 +406,9 @@ public class VistaPrincipal extends javax.swing.JFrame {
             a.start();
             b.start();
             c.start();
+            hiloAEjecutandose = true;
+            hiloBEjecutandose = true;
+            hiloCEjecutandose = true;
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Coloque un numero valido en el campo (NO LETRAS)");
         }
@@ -388,6 +422,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
         a.stop();
         b.stop();
         c.stop();
+        hiloAEjecutandose = false;
+        hiloBEjecutandose = false;
+        hiloCEjecutandose = false;
+        if (todosLosHilosDetenidos() && verificarJLabelsIguales()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Usted ha ganado!");
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Intente de nuevo!");
+        }
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -395,6 +437,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
             String segundosTextA = jTextField2.getText();
             a = new HiloA(Integer.parseInt(segundosTextA));
             a.start();
+            hiloAEjecutandose = true;
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Coloque un numero valido en el campo (NO LETRAS)");
         }
@@ -405,6 +449,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
             String segundosTextB = jTextField1.getText();
             b = new HiloB(Integer.parseInt(segundosTextB));
             b.start();
+            hiloBEjecutandose = true;
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Coloque un numero valido en el campo (NO LETRAS)");
         }
@@ -415,6 +461,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
             String segundosTextC = jTextField4.getText();
             c = new HiloC(Integer.parseInt(segundosTextC));
             c.start();
+            hiloCEjecutandose = true;
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Coloque un numero valido en el campo (NO LETRAS)");
         }
@@ -422,15 +470,48 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         a.stop();
+        hiloAEjecutandose = false;
+        if (todosLosHilosDetenidos() && verificarJLabelsIguales()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Usted ha ganado!");
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Intente de nuevo!");
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         b.stop();
+        hiloBEjecutandose = false;
+        if (todosLosHilosDetenidos() && verificarJLabelsIguales()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Usted ha ganado!");
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Intente de nuevo!");
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         c.stop();
+        hiloCEjecutandose = false;
+        if (todosLosHilosDetenidos() && verificarJLabelsIguales()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Usted ha ganado!");
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Intente de nuevo!");
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private boolean todosLosHilosDetenidos() {
+        return !hiloAEjecutandose && !hiloBEjecutandose && !hiloCEjecutandose;
+    }
+
+    private boolean verificarJLabelsIguales() {
+        var icono1 = jLabel4.getIcon();
+        var icono2 = jLabel7.getIcon();
+        var icono3 = jLabel13.getIcon();
+
+        if (icono1 == null || icono2 == null || icono3 == null) {
+            return false;
+        }
+        return icono1.toString().equals(icono2.toString()) && icono2.toString().equals(icono3.toString());
+    }
 
     /**
      * @param args the command line arguments
