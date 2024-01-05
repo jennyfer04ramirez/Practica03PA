@@ -266,6 +266,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
         b = new HiloB(segundos);
         c = new HiloC(segundos);
         a.start();
+        b.start();
+        c.start();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
