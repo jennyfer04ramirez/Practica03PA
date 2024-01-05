@@ -22,6 +22,7 @@ public class HiloA extends Thread{
         int numero = 1;
         while (true) {            
             if(numero ==5) numero = 1;
+            System.out.println(numero);
             String ruta = "src\\main\\resources\\imagenes\\"+numero+".jpg";
             numero++;
             ImageIcon imagen = new ImageIcon(ruta);
